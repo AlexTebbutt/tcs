@@ -90,7 +90,7 @@
 			
 					<form id="newsletter-subscribe" action="">
 						
-						<label for="subscription-email"><span>Subscribe<span> to our newsletter</label>
+						<label for="subscription-email"><span class="aimh-font">Subscribe</span> to our newsletter</label>
 						
 						<input id="subscription-email" type="email" placeholder="your@email.com" />
 						

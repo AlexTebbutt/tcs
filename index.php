@@ -12,6 +12,8 @@
     <div class="row">
 
 	    <div class="twelve columns">
+		    
+		    <p class="aimh-font">Some copy about not very much</p>
 
 				<img src="_/placeholders/home-content-placeholder.jpg" alt="home-content-placeholder" class="u-full-width" />
 			
