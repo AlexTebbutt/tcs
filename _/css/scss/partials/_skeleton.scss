@@ -238,7 +238,7 @@ select {
   padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
   background-color: #fff;
   border: 1px solid #D1D1D1;
-  border-radius: 4px;
+//   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box; }
 /* Removes awkward default styles on some inputs for iOS */
@@ -391,6 +391,22 @@ hr {
   display: table;
   clear: both; }
 
+/* ==================================
+
+Non Skeleton Framework styling goes below
+
+================================== */
+
+
+/* Global Styles
+----------------------------------- */
+.main-content, .footer-content {
+	padding: 2%;
+}
+
+.main-content {
+	background-color: $lightgrey;
+}
 
 /* Fonts
 ----------------------------------- */
@@ -403,13 +419,150 @@ hr {
 	font-style: normal;
 }
 
-a.logo {
+
+/* Header & Nav
+----------------------------------- */
+header {
+	margin-top: -310px;
+	transition: margin .5s ease-in-out;
+	-webkit-transition: margin .5s ease-in-out;
+	-moz-transition: margin .5s ease-in-out;	
+}
+
+header.show-mobile-nav {
+	margin-top: 0;
+}
+
+.logo, .social-networks, .mobile-thumb {
+	text-align: center;
+}
+
+.logo a, a.mobile-toggle {
 	color: $pink;
 	font-family: 'TypekaRegularRegular';
-	font-size: 4rem;
 	text-decoration: none;
 }
 
+.logo a{
+	font-size: 4rem;
+}
+
+a.mobile-toggle {
+	font-size: 3rem;		
+}
+
+.logo a:hover {
+	color: $pink;	
+}
+
+nav {
+	font-size: 1.2rem;
+}
+
+nav ul li {
+	display: block;
+	text-align: center;
+}
+
+nav a {
+	color: $darkgrey;
+	font-weight: bolder;
+	letter-spacing: 0.1em;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: color .5s ease-in-out;
+	-webkit-transition: color .5s ease-in-out;
+	-moz-transition: color .5s ease-in-out;
+}
+
+nav a:hover, nav a.active {
+	color: $pink;
+}
+
+.social-networks ul {
+	margin-bottom: 0;
+}
+
+.social-networks ul li {
+	display: inline-block;
+}
+
+a.instagram-icon, a.facebook-icon, a.twitter-icon, a.pinterest-icon {
+	background-repeat: no-repeat;
+  background-size: 54px 54px;
+  display: block;
+  height: 54px;
+  line-height: 54px;
+  text-align: left;
+  text-indent: -9999px;
+  width: 54px;
+}
+
+a.instagram-icon {
+	background-image: url(../images/instagram-icon.png);
+}
+
+a.facebook-icon {
+	background-image: url(../images/facebook-icon.png);
+}
+
+a.twitter-icon {
+	background-image: url(../images/twitter-icon.png);
+}
+
+a.pinterest-icon {
+	background-image: url(../images/pinterest-icon.png);
+}
+
+form#newsletter-subscribe {
+	display: none;
+}
+
+
+/* Footer
+----------------------------------- */
+footer {
+	background-color: $bronze;
+	color: $white;
+	font-size: 1rem;
+	font-weight: bolder;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+footer .row:nth-child(2) {
+	border-top: 1px solid $white;
+	border-bottom: 1px solid $white;
+	margin: 10px 0;
+	padding: 10px 0;
+}
+
+footer ul#footer-contact-details, footer ul#footer-creds {
+	text-align: center;
+	list-style: none;
+}
+
+footer ul {
+	margin-bottom: 0;
+}
+
+footer ul li {
+	margin-bottom: 0;
+}
+
+footer ul li a {
+	color: $white;
+	text-decoration: none;
+	transition: color .5s ease-in-out;
+	-webkit-transition: color .5s ease-in-out;
+	-moz-transition: color .5s ease-in-out;
+}
+
+footer ul li a:hover {
+	color: $pink;
+	text-decoration: none;	
+}
 
 /* Media Queries
 ----------------------------------- */
@@ -425,7 +578,90 @@ there.
 @media (min-width: 400px) {}
 
 /* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {}
+@media (min-width: 550px) {
+	header {
+		border-bottom: 0;
+		margin-top: 40px;	
+	}
+	
+	header .row:first-child {
+		margin-bottom: 30px
+	}
+	
+	.logo {
+		text-align: left;
+	}
+	
+	.social-networks {
+		text-align: right;
+	}
+
+	nav {
+		padding-top: 5px;
+	}
+
+	nav ul li {
+		display: inline-block;
+		margin-right: 2em;
+	}
+	
+	nav ul li:last-child {
+		display: inline-block;
+		margin-right: 0;
+	}
+	
+	form#newsletter-subscribe {
+		display: block;
+		width: 377px;
+	}
+	
+	form#newsletter-subscribe label {
+		background-color: $pink;
+		color: $white;
+		display: inline-block;
+		height: 27px;
+		float: right;
+		font-size: 1rem;	
+		line-height: 27px;
+		width: 180px;
+		text-align: center;
+		text-transform: uppercase;
+		vertical-align: middle;
+	}
+	
+	form#newsletter-subscribe input {
+		border-color: $lightgrey;
+		font-size: 1.1rem;	
+		height: 27px;
+		width: 197px;
+	}
+	
+	.mobile-thumb {
+		display: none;
+	}
+	
+	footer ul li {
+		display: inline-block;
+	}
+	
+	footer ul#footer-contact-details li + li:before,  footer ul#footer-creds li + li:before {
+    content: "|";
+    padding: 1rem;
+	}
+	
+	footer ul#footer-contact-details {
+		text-align: left;
+	}
+
+	footer ul#footer-creds {
+		text-align: right;
+	}
+	
+	footer .row:nth-child(3) {
+		text-align: right;
+	}
+	
+}
 
 /* Larger than tablet */
 @media (min-width: 750px) {}
