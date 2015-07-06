@@ -1,0 +1,29 @@
+<perch:before>
+
+<div class="row inset-white spacer">
+	
+</perch:before>
+
+	<perch:repeater id="inlink-panels" label="Inlink Panels" max="4">
+	
+		<div class="three columns inlink-panel">
+		  
+		  <a href="<perch:content type="text" id="inlink-link" label="URL for link" help="External URL or site page URL to be linked to" />">
+		  	
+		  	<img class="u-full-width" src="<perch:content type="image" id="inlink-panel-image" label="Inlink Panel Image" bucket="inlink-images" />" alt="<perch:content type="text" id="alt" label="Inlink Image Description" help="Where does the panel link to?" />" />
+		  	
+		  </a>
+		
+		 	<a href="<perch:content type="text" id="inlink-link" label="URL for link" help="External URL or site page URL to be linked to" />"><perch:content type="text" id="inlink-text" label="Inlink link text" help="E.g. Follow us on Instagram" title="true" /></a>
+		  
+		</div>
+		
+	</perch:repeater>
+
+<perch:after>
+
+</div>
+
+</perch:after>
+
+

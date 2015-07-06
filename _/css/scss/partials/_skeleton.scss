@@ -565,6 +565,37 @@ footer ul li a:hover {
 	text-decoration: none;	
 }
 
+/* Inlink Panels used on home and contact page
+----------------------------------------------------- */
+
+.inlink-panel a {
+  background-color: $pink;
+  border: 1px solid $pink;
+  box-sizing: border-box;
+  cursor: pointer;
+  color: $white;
+	display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  height: 38px;
+  line-height: 38px;
+  letter-spacing: .1rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  width: 100%;
+  transition: all .5s ease-in-out;
+	-webkit-transition: all .5s ease-in-out;
+	-moz-transition: all .5s ease-in-out;
+
+}
+
+.inlink-panel a:hover {
+	color: $darkgrey;
+	background-color: $white;
+}
+
 /* Media Queries
 ----------------------------------- */
 /*
