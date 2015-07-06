@@ -11,14 +11,32 @@
 
     <div class="row">
 
-	    <div class="twelve columns">
+	    <div class="twelve columns inset-white">
 		    
-		    <p class="aimh-font">Some copy about not very much</p>
-
-				<img src="_/placeholders/home-content-placeholder.jpg" alt="home-content-placeholder" class="u-full-width" />
+		    <?php perch_content('Home Hero'); ?>
 			
 			</div>
 
+    </div>
+    
+    <div class="row inset-white spacer">
+	    
+    <div class="three columns">
+	    
+	    
+	    
+	    <img class="u-full-width" src="_assets/instagem-inlink.jpg" alt="home-hero-1" />
+	    
+	    <a class="inlink" href="#" class="inlinks">Follow us on Instagram</a>
+
+	    <img class="u-full-width" src="_assets/instagem-inlink.jpg" alt="home-hero-1" />
+	    
+	    <a href="#" class="inlinks">Follow us on Instagram</a>
+	    
+    </div>
+	    
+	    <?php perch_content('Home In-links'); ?>
+	    
     </div>				
 
   </div>
