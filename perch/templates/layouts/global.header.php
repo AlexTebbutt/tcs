@@ -17,14 +17,13 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
 
-  <!-- CSS
+  <!-- CSS Register in /perch/addons/feathers/thecross/runtime.php
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="_/css/normalize.css">
-  <link rel="stylesheet" href="_/css/skeleton.css">
-  <link rel="stylesheet" href="_/css/font-stylesheet.css">
+	<?php perch_get_css(); ?>
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
   <link rel="icon" type="image/png" href="images/favicon.png">
 
 </head>
@@ -79,7 +78,7 @@
 							
 							<li><a href=""<?php if(perch_layout_var('activePage', true) == 'blog') echo ' class="active"'; ?>>Blog</a></li>
 							
-							<li><a href=""<?php if(perch_layout_var('activePage', true) == 'contact') echo ' class="active"'; ?>>Contact</a></li>				
+							<li><a href="contact.php"<?php if(perch_layout_var('activePage', true) == 'contact') echo ' class="active"'; ?>>Contact</a></li>				
 							
 						</ul>
 						
