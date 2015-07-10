@@ -68,15 +68,15 @@
 						
 						<ul>
 			
-							<li><a href=""<?php if(perch_layout_var('activePage', true) == 'home') echo ' class="active"'; ?>>About Us</a></li>						
+							<li><a href="about-us.php"<?php if(perch_layout_var('activePage', true) == 'home') echo ' class="active"'; ?>>About Us</a></li>						
 			
-							<li><a href=""<?php if(perch_layout_var('activePage', true) == 'whats-new') echo ' class="active"'; ?>>What's New</a></li>
+							<li><a href="whats-new.php"<?php if(perch_layout_var('activePage', true) == 'whats-new') echo ' class="active"'; ?>>What's New</a></li>
 							
-							<li><a href=""<?php if(perch_layout_var('activePage', true) == 'new-season') echo ' class="active"'; ?>>New Season</a></li>
+							<li><a href="new-season.php"<?php if(perch_layout_var('activePage', true) == 'new-season') echo ' class="active"'; ?>>New Season</a></li>
 							
 							<li><a href=""<?php if(perch_layout_var('activePage', true) == 'shop') echo ' class="active"'; ?>>Shop</a></li>
 							
-							<li><a href=""<?php if(perch_layout_var('activePage', true) == 'blog') echo ' class="active"'; ?>>Blog</a></li>
+							<li><a href="blog.php"<?php if(perch_layout_var('activePage', true) == 'blog') echo ' class="active"'; ?>>Blog</a></li>
 							
 							<li><a href="contact.php"<?php if(perch_layout_var('activePage', true) == 'contact') echo ' class="active"'; ?>>Contact</a></li>				
 							
@@ -90,7 +90,7 @@
 			
 					<form id="newsletter-subscribe" action="">
 						
-						<label for="subscription-email"><span class="aimh-font">Subscribe</span> to our newsletter</label>
+						<label for="subscription-email"><span class="handwritten">Subscribe</span> to our newsletter</label>
 						
 						<input id="subscription-email" type="email" placeholder="your@email.com" />
 						

@@ -121,8 +121,8 @@ are based on 10px sizing. So basically 1.5rem = 15px :) */
 html {
   font-size: 62.5%; }
 body {
-  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
-  line-height: 1.6;
+  font-size: 1.4em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  line-height: 1.4;
   font-weight: 400;
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #222; }
@@ -158,9 +158,15 @@ p {
 /* Links
 ----------------------------------- */
 a {
-  color: #1EAEDB; }
-a:hover {
-  color: #0FA0CE; }
+  color: $pink; 
+	transition: color .5s ease-in-out;
+	-webkit-transition: color .5s ease-in-out;
+	-moz-transition: color .5s ease-in-out;  
+	text-decoration: none;
+}
+.main-content a:hover {
+	border-bottom: 1px solid $pink;
+}
 
 
 /* Buttons
@@ -354,7 +360,7 @@ p,
 ul,
 ol,
 form {
-  margin-bottom: 2.5rem; }
+  margin-bottom: 1.5rem; }
 
 
 /* Utilities
@@ -408,10 +414,6 @@ Non Skeleton Framework styling goes below
 	background-color: $lightgrey;
 }
 
-label {
-	font-family: 'AlwaysInMyHeart';
-}
-
 .inset-white {
 	background-color: $white;
 	padding: 2%;
@@ -420,6 +422,21 @@ label {
 .spacer {
 	margin-top: 2%;
 }
+
+.main-content h1, .handwritten {
+	font-family: 'AlwaysInMyHeart';	
+}
+
+.main-content h1 {
+	color: $pink;
+	font-size: 7.0rem;
+	font-weight: 100;
+}
+
+.main-content p {
+	color: $darkgrey;
+}
+
 
 /* Header & Nav
 ----------------------------------- */
@@ -440,20 +457,16 @@ header.show-mobile-nav {
 
 .logo a, a.mobile-toggle {
 	color: $pink;
-	font-family: 'TypekaRegularRegular';
+ 	font-family: 'TypekaRegularRegular';
 	text-decoration: none;
 }
 
 .logo a{
-	font-size: 4rem;
+	font-size: 5rem;
 }
 
 a.mobile-toggle {
 	font-size: 3rem;		
-}
-
-.logo a:hover {
-	color: $pink;	
 }
 
 nav {
@@ -469,7 +482,6 @@ nav a {
 	color: $darkgrey;
 	font-weight: bolder;
 	letter-spacing: 0.1em;
-	text-decoration: none;
 	text-transform: uppercase;
 	transition: color .5s ease-in-out;
 	-webkit-transition: color .5s ease-in-out;
@@ -532,11 +544,16 @@ footer {
 	text-align: center;
 }
 
-footer .row:nth-child(2) {
-	border-top: 1px solid $white;
+footer .row:first-child {
 	border-bottom: 1px solid $white;
-	margin: 10px 0;
-	padding: 10px 0;
+	padding-bottom: 15px; 
+	margin-bottom: 15px;
+}
+
+footer .row:last-child {
+	border-top: 1px solid $white;
+	padding-top: 15px; 
+	margin-top: 15px;
 }
 
 footer ul#footer-contact-details, footer ul#footer-creds {
@@ -563,6 +580,11 @@ footer ul li a {
 footer ul li a:hover {
 	color: $pink;
 	text-decoration: none;	
+}
+
+footer p.handwritten {
+	font-size: 3.5rem;
+	text-transform: none;
 }
 
 /* Inlink Panels used on home and contact page
@@ -686,10 +708,6 @@ there.
 	}
 
 	footer ul#footer-creds {
-		text-align: right;
-	}
-	
-	footer .row:nth-child(3) {
 		text-align: right;
 	}
 	

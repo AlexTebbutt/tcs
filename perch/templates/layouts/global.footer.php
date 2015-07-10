@@ -24,6 +24,16 @@
 
 				<div class="row">
 					
+					<div class="twelve columns">
+						
+						<p class="handwritten">as seen in ]</p>
+						
+					</div>
+					
+				</div>
+									
+				<div class="row">
+						
 					<?php perch_content('Footer Logos'); ?>
 								
 				</div>

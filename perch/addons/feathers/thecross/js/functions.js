@@ -24,3 +24,6 @@ $('a.mobile-toggle').on('click', function(e) {
   $('header').toggleClass("show-mobile-nav");
   e.preventDefault();
 });
+
+// Open content links in new page
+$(".main-content a[href^='http:'],a[href^='https:']").attr("target","_blank");

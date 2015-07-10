@@ -522,6 +522,9 @@ label {
 .spacer {
   margin-top: 2%; }
 
+.main-content p {
+  color: #a4a1a1; }
+
 /* Header & Nav
 ----------------------------------- */
 header {
@@ -745,5 +748,34 @@ there.
 /* Larger than tablet */
 /* Larger than desktop */
 /* Larger than Desktop HD */
+/* Slideshow */
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0; }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  margin-bottom: 0; }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left; }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  border: 0; }
 
 /*# sourceMappingURL=master.css.map */
