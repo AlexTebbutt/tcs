@@ -68,7 +68,7 @@
 						
 						<ul>
 			
-							<li><a href="about-us.php"<?php if(perch_layout_var('activePage', true) == 'home') echo ' class="active"'; ?>>About Us</a></li>						
+							<li><a href="about-us.php"<?php if(perch_layout_var('activePage', true) == 'about-us') echo ' class="active"'; ?>>About Us</a></li>						
 			
 							<li><a href="whats-new.php"<?php if(perch_layout_var('activePage', true) == 'whats-new') echo ' class="active"'; ?>>What's New</a></li>
 							
@@ -93,7 +93,7 @@
 						<label for="subscription-email"><span class="handwritten">Subscribe</span> to our newsletter</label>
 						
 						<input id="subscription-email" type="email" placeholder="your@email.com" />
-						
+
 					</form>
 	
 				</div>

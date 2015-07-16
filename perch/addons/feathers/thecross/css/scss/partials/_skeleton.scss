@@ -423,7 +423,7 @@ Non Skeleton Framework styling goes below
 	margin-top: 2%;
 }
 
-.main-content h1, .handwritten {
+.main-content h1, .handwritten, blockquote p {
 	font-family: 'AlwaysInMyHeart';	
 }
 
@@ -437,11 +437,36 @@ Non Skeleton Framework styling goes below
 	color: $darkgrey;
 }
 
+blockquote {
+	margin: 0 0 1.5rem 0;
+}
+
+.main-content blockquote p {
+	color: $pink;
+	font-size: 3rem;
+	line-height: 3.5rem;
+}
+
+blockquote footer {
+	background-color: $white;
+	text-align: right;
+	width: 100%;
+}
+
+blockquote cite {
+	color: $darkgrey;
+	font-style: normal;
+	font-size: 1.2rem;
+	padding-right: 10%;
+	text-align: right;
+	text-transform: uppercase;
+}
+
 
 /* Header & Nav
 ----------------------------------- */
 header {
-	margin-top: -310px;
+	margin-top: -295px;
 	transition: margin .5s ease-in-out;
 	-webkit-transition: margin .5s ease-in-out;
 	-moz-transition: margin .5s ease-in-out;	
@@ -666,7 +691,6 @@ there.
 	
 	form#newsletter-subscribe {
 		display: block;
-		width: 377px;
 	}
 	
 	form#newsletter-subscribe label {
@@ -677,17 +701,23 @@ there.
 		float: right;
 		font-size: 1rem;	
 		line-height: 27px;
-		width: 180px;
+		width: 55%;
 		text-align: center;
 		text-transform: uppercase;
 		vertical-align: middle;
+	}
+	
+	form#newsletter-subscribe label span {
+		text-transform: none;
+		font-size: 1.3rem;
+		padding-right: 0.5rem;
 	}
 	
 	form#newsletter-subscribe input {
 		border-color: $lightgrey;
 		font-size: 1.1rem;	
 		height: 27px;
-		width: 197px;
+		width: 45%;
 	}
 	
 	.mobile-thumb {

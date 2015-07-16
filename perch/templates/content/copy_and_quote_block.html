@@ -1,0 +1,25 @@
+<perch:blocks>
+
+	<perch:block type="copy" label="Copy Block">
+
+		<perch:content id="copy" type="textarea" label="Left Column Copy" markdown="true" editor="markitup" html="true" />
+	
+	</perch:block>
+	
+	<perch:block type="quote" label="Quote">
+	
+		<blockquote>
+
+			<p><perch:content id="quote" type="text" label="Left Column Quote" required="true" /></p>
+	
+			<footer>
+
+				<cite><perch:content id="quote-source" type="text" label="Quote Source" title="true" /></cite>
+			
+			</footer>
+			
+		</blockquote>
+	
+	</perch:block>
+
+</perch:blocks>
