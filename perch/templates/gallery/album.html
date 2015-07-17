@@ -1,7 +1,7 @@
 <h2><perch:gallery id="albumTitle" type="text" label="Title" size="l" /></h2>
 
-<perch:gallery id="category" type="select" label="Category" options="Bespoke, Brand" allowempty="false" required="true" suppress="true" />
+<perch:gallery id="category" type="select" label="Category" options="Bespoke|bespoke, What's New|whats-new, New Season|new-season" allowempty="false" required="true" suppress="true" />
 
-<perch:gallery id="description" type="textarea" label="Description" editor="markitup" textile="true" order="1" size="m" />
+<perch:gallery id="description" type="textarea" label="Description" editor="markitup" textile="true" order="1" size="m" help="Only needed for Bespoke and What's New albums." />
 
-<perch:content id="display-title" type="composite" for="category albumTitle" join=" - " title="true" />
+<perch:gallery id="albumImage" type="image" key="album" label="Album Image" help="Only needed for Bespoke and What's New albums. Image is shown to the right of teh title on the page." />
