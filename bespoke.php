@@ -4,6 +4,7 @@
 	perch_layout('global.header', array(
 		'activePage' => 'contact',
 	));
+	
 ?>
 
 <div class="row">
