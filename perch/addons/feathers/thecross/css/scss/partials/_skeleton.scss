@@ -487,7 +487,7 @@ header.show-mobile-nav {
 }
 
 .logo a{
-	font-size: 5rem;
+	font-size: 5.5rem;
 }
 
 a.mobile-toggle {
@@ -643,6 +643,84 @@ footer p.handwritten {
 	background-color: $white;
 }
 
+/* Gallery and album styling for Bespoke, What's New and New Season
+----------------------------------- */
+.polaroid {
+	margin: 20px;
+}
+
+.row.even .polaroid.p-1, .row.even .polaroid.p-3, .row.odd .polaroid.p-2 {
+	transform: rotate(357deg);
+	-webkit-transform: rotate(357deg);
+	-moz-transform: rotate(357deg); 
+	-o-transform: rotate(357deg);
+	-ms-transform: rotate(357deg);	
+}
+
+.row.even .polaroid.p-2, .row.odd .polaroid.p-1, .row.odd .polaroid.p-3 {
+	transform: rotate(3deg);
+	-webkit-transform: rotate(3deg);
+	-moz-transform: rotate(3deg); 
+	-o-transform: rotate(3deg);
+	-ms-transform: rotate(3deg);	
+}
+
+.polaroid .drop-shadow {
+	box-shadow: 5px 6px 8px $darkgrey;
+	margin-top: -23px;
+}
+
+span.sticky.tape {
+	background-repeat: no-repeat;
+	background-size: 109px 46px;
+	display: block;
+	height: 46px;
+	position: relative;
+	width: 109px;
+	margin: 0 auto;
+}
+
+.row.even .polaroid.p-1 .sticky.tape {
+	background-image: url(../images/sticky-tape-1.png);
+}
+
+.row.even .polaroid.p-2 .sticky.tape {
+	background-image: url(../images/sticky-tape-2.png);
+}
+
+.row.even .polaroid.p-3 .sticky.tape {
+	background-image: url(../images/sticky-tape-3.png);
+}
+
+.row.odd .polaroid.p-1 .sticky.tape {
+	background-image: url(../images/sticky-tape-4.png);
+}
+
+.row.odd .polaroid.p-2 .sticky.tape {
+	background-image: url(../images/sticky-tape-5.png);
+}
+
+.row.odd .polaroid.p-3 .sticky.tape {
+	background-image: url(../images/sticky-tape-6.png);
+}
+
+.polaroid .drop-shadow img {
+	padding: 20px;
+}
+
+.polaroid div.drop-shadow h3 {
+	text-align: center;
+}
+
+.polaroid div.drop-shadow h3 a {
+	color: rgb(0,0,0);
+}
+
+.polaroid div.drop-shadow h3 a:hover {
+	border-bottom: none;
+}
+
+
 /* Media Queries
 ----------------------------------- */
 /*
@@ -664,7 +742,7 @@ there.
 	}
 	
 	header .row:first-child {
-		margin-bottom: 30px
+		margin-bottom: 10px
 	}
 	
 	.logo {
@@ -739,6 +817,10 @@ there.
 
 	footer ul#footer-creds {
 		text-align: right;
+	}
+	
+	.polaroid {
+		margin: 0;
 	}
 	
 }

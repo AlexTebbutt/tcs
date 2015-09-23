@@ -1,11 +1,25 @@
 <perch:before>
-<ul>
+<div class="row inset-white even">
 </perch:before>
 
-<li class="album">
-	<h3><a href="album.php?s=<perch:gallery id="albumSlug" />"><perch:gallery id="albumTitle" /></a></h3>
-	<perch:gallery id="description" type="textarea" textile="true" />
-</li>
+	<div class="four columns">
+			
+		<div class="polaroid <perch:every nth-child="3n+1">p-1</perch:every><perch:every nth-child="3n+2">p-2</perch:every><perch:every nth-child="3n+3">p-3</perch:every>">	
+			<span class="sticky tape"></span>
+			<div class="drop-shadow">
+				<img class="u-full-width" src="<perch:gallery id="albumImage" />" />
+				<h3 class="handwritten"><a href="album.php?s=<perch:gallery id="albumSlug" />"><perch:gallery id="albumTitle" /></a></h3>
+			</div>
+		</div>
+		
+	</div>
+
+<perch:every count="3">
+</div>
+
+<div class="row inset-white <perch:every nth-child="odd">odd<perch:else />even</perch:every>">
+</perch:every>
+
 <perch:after>
-</ul>
+</div>
 </perch:after>
