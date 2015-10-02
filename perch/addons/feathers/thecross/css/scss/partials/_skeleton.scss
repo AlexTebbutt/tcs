@@ -423,7 +423,7 @@ Non Skeleton Framework styling goes below
 	margin-top: 2%;
 }
 
-.main-content h1, .handwritten, blockquote p {
+.main-content h1, .handwritten, blockquote p, .polaroid p {
 	font-family: 'AlwaysInMyHeart';	
 }
 
@@ -657,7 +657,7 @@ footer p.handwritten {
 	-ms-transform: rotate(357deg);	
 }
 
-.row.even .polaroid.p-2, .row.odd .polaroid.p-1, .row.odd .polaroid.p-3 {
+.row.even .polaroid.p-2, .row.odd .polaroid.p-1, .row.odd .polaroid.p-3, .polaroid.p-0  {
 	transform: rotate(3deg);
 	-webkit-transform: rotate(3deg);
 	-moz-transform: rotate(3deg); 
@@ -680,7 +680,7 @@ span.sticky.tape {
 	margin: 0 auto;
 }
 
-.row.even .polaroid.p-1 .sticky.tape {
+.row.even .polaroid.p-1 .sticky.tape, .polaroid.p-0 .sticky.tape {
 	background-image: url(../images/sticky-tape-1.png);
 }
 
@@ -716,8 +716,14 @@ span.sticky.tape {
 	color: rgb(0,0,0);
 }
 
-.polaroid div.drop-shadow h3 a:hover {
+.polaroid div.drop-shadow h3 a:hover, .polaroid a:hover {
 	border-bottom: none;
+}
+
+.polaroid p {
+	color: rgb(0,0,0);
+	padding: 5px 10px;
+	text-align: center;
 }
 
 

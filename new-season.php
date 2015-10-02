@@ -1,7 +1,10 @@
 <?php 
 
 	include('perch/runtime.php');
-	perch_layout('global.header');
+	perch_layout('global.header', array(
+		'activePage' => 'new-season',
+	));
+
 	
 ?>
 
@@ -9,9 +12,9 @@
 
   <div class="twelve columns inset-white">
 		  
-		  <h1 class="handwritten"><?php perch_content('Bespoke Page Title'); ?></h1>
+		  <h1 class="handwritten"><?php perch_content('Whats New Page Title'); ?></h1>
 		  
-		  <?php perch_content('Bespoke Page Main Copy'); ?>
+		  <?php perch_content('Whats New Page Main Copy'); ?>
 		  
 	</div>
 	
@@ -22,17 +25,17 @@
   <?php 
 	  	
 	  perch_gallery_albums(array(
-		  										'template'=>'bespoke_album.html',
+		  										'template'=>'new_season_album.html',
 													'filter'=>'category',
 													'match'=>'eq',
-													'value'=>'bespoke' 
+													'value'=>'new-season' 
 												));
 	?>
 	
 
 <?php
 	perch_layout('global.footer', array(
-		'activePage' => 'contact',
+		'activePage' => 'new-season',
 	));
 
 ?>
