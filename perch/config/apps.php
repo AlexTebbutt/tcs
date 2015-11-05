@@ -3,4 +3,5 @@
 		'content', 
 		'categories',
 		'perch_gallery',
+		'perch_blog',		
 	);

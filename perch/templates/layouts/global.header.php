@@ -38,7 +38,7 @@
 				
 				<div class="one-half column logo">
 			
-					<a href="index.php">The Cross</a>
+					<a href="http://tcs.dev/index.php">The Cross</a>
 						
 				</div>
 			
@@ -76,7 +76,7 @@
 							
 							<li><a href=""<?php if(perch_layout_var('activePage', true) == 'shop') echo ' class="active"'; ?>>Shop</a></li>
 							
-							<li><a href="blog.php"<?php if(perch_layout_var('activePage', true) == 'blog') echo ' class="active"'; ?>>Blog</a></li>
+							<li><a href="blog/index.php"<?php if(perch_layout_var('activePage', true) == 'blog') echo ' class="active"'; ?>>Blog</a></li>
 							
 							<li><a href="contact.php"<?php if(perch_layout_var('activePage', true) == 'contact') echo ' class="active"'; ?>>Contact</a></li>				
 							

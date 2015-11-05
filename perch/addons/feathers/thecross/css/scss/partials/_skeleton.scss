@@ -482,7 +482,7 @@ header.show-mobile-nav {
 
 .logo a, a.mobile-toggle {
 	color: $pink;
- 	font-family: 'TypekaRegularRegular';
+ 	font-family: 'MyUnderwoodRegular';
 	text-decoration: none;
 }
 
@@ -615,7 +615,7 @@ footer p.handwritten {
 /* Inlink Panels used on home and contact page
 ----------------------------------------------------- */
 
-.inlink-panel a {
+.inlink-panel a, .vertical-inlink-panel a {
   background-color: $pink;
   border: 1px solid $pink;
   box-sizing: border-box;
@@ -638,18 +638,37 @@ footer p.handwritten {
 
 }
 
-.inlink-panel a:hover {
+.inlink-panel a:hover, .vertical-inlink-panel a:hover {
 	color: $darkgrey;
 	background-color: $white;
 }
 
+/* Vertical Inlink Panels used on blog
+----------------------------------------------------- */
+.vertical-inlink-panel:first-child {
+	margin-top: 30px;
+}
+
+.vertical-inlink-panel {
+	float: right;
+	margin-bottom: 30px;
+}
+
+.vertical-inlink-panel:last-child {
+	margin-bottom: 0;
+}
+
+
+
 /* Gallery and album styling for Bespoke, What's New and New Season
 ----------------------------------- */
+
+/* What's New Gallery & polaroid snaps */
 .polaroid {
 	margin: 20px;
 }
 
-.row.even .polaroid.p-1, .row.even .polaroid.p-3, .row.odd .polaroid.p-2 {
+.row.even .polaroid.p-1, .row.even .polaroid.p-3, .row.odd .polaroid.p-2, .polaroid.g-2 {
 	transform: rotate(357deg);
 	-webkit-transform: rotate(357deg);
 	-moz-transform: rotate(357deg); 
@@ -657,7 +676,7 @@ footer p.handwritten {
 	-ms-transform: rotate(357deg);	
 }
 
-.row.even .polaroid.p-2, .row.odd .polaroid.p-1, .row.odd .polaroid.p-3, .polaroid.p-0  {
+.row.even .polaroid.p-2, .row.odd .polaroid.p-1, .row.odd .polaroid.p-3, .polaroid.g-1  {
 	transform: rotate(3deg);
 	-webkit-transform: rotate(3deg);
 	-moz-transform: rotate(3deg); 
@@ -680,15 +699,16 @@ span.sticky.tape {
 	margin: 0 auto;
 }
 
-.row.even .polaroid.p-1 .sticky.tape, .polaroid.p-0 .sticky.tape {
+.row.even .polaroid.p-1 .sticky.tape, .polaroid.g-1 .sticky.tape {
 	background-image: url(../images/sticky-tape-1.png);
 }
 
-.row.even .polaroid.p-2 .sticky.tape {
+
+.row.even .polaroid.p-2 .sticky.tape, .polaroid.g-2 .sticky.tape {
 	background-image: url(../images/sticky-tape-2.png);
 }
 
-.row.even .polaroid.p-3 .sticky.tape {
+.row.even .polaroid.p-3 .sticky.tape, .polaroid.g-3 .sticky.tape {
 	background-image: url(../images/sticky-tape-3.png);
 }
 
@@ -724,6 +744,48 @@ span.sticky.tape {
 	color: rgb(0,0,0);
 	padding: 5px 10px;
 	text-align: center;
+}
+
+/* What's New */
+.pink-gallery-box {
+	background-color: rgb(254,178,219);
+
+	a:hover {
+		border-bottom: none;
+	}
+}
+
+
+/* Blog styling
+----------------------------------- */
+li.hentry {
+	list-style: none;
+}
+
+li.hentry h2, p.entry-published.date, li.hentry img, .description.entry-summary {
+	display: inline-block;	
+}
+
+li.hentry h2 {
+	width: 79%;
+}
+
+p.entry-published.date {
+	width: 20%;
+}
+
+li.hentry img {
+	width: 30%;
+}
+
+.description.entry-summary {
+	padding-left: 9%;
+	vertical-align: top;
+	width: 60%;
+}
+
+.clear {
+	clear: both;
 }
 
 

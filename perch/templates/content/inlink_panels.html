@@ -10,7 +10,7 @@
 
 			<perch:content type="checkbox" id="external-link" value="1" label="External Link" suppress="true" help="Check this if the link is to an external page and needs to open in a new window / tab" />
 		  
-	  	<img class="u-full-width" src="<perch:content type="image" id="inlink-panel-image" label="Inlink Panel Image" bucket="inlink-images" />" alt="<perch:content type="text" id="alt" label="Inlink Image Description" help="Where does the panel link to?" />" />
+	  	<img class="u-full-width" src="<perch:content type="image" id="inlink-panel-image" width="390" density="2" label="Inlink Panel Image" bucket="inlink-images" />" alt="<perch:content type="text" id="alt" label="Inlink Image Description" help="Where does the panel link to?" />" />
 		
 		 	<a href="<perch:content type="text" id="inlink-link" label="URL for link" help="External URL or site page URL to be linked to" />"<perch:if exists="external-link"> target="_blank"</perch:if> ><perch:content type="text" id="inlink-text" label="Inlink link text" help="E.g. Follow us on Instagram" title="true" /></a>
 		  
