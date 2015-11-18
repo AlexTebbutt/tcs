@@ -1,0 +1,177 @@
+<perch:help>
+<strong>Blog Entry Help</strong>
+<p>The first 3 fields (title, hero image and excerpt) are used for both the listing page and the main post. The hero image, if added, with be displayed as a square thumbnail next to the excerpt copy on the listings page or as a full width image at the top of the main post.</p>
+<p>The main body of the post is built from the blog blocks further down this page</p>
+</perch:help>
+
+
+<article class="post-entry">	
+
+<div class="row">
+
+	<div class="twelve columns">
+
+		<h1>
+	
+      <perch:blog id="postTitle" type="text" label="Title" required="true" size="xl autowidth" order="1" />
+	
+	  </h1>			
+	
+	</div>
+	
+	<div class="twelve columns post-meta">
+
+		        <time class="dt-published" datetime="<perch:blog id="postDateTime" type="date" label="Date" time="true" format="Y-m-d H:i:s" divider-before="Publishing" />">
+            Posted on <perch:blog id="postDateTime" type="date" time="true" format="%d %B %Y" /> 
+        </time>
+		<perch:if exists="authorGivenName">
+            by <span class="p-author h-card"><perch:blog id="authorGivenName" type="hidden" /> <perch:blog id="authorFamilyName" type="hidden" />.</span>
+        </perch:if>    
+        <perch:categories id="categories" set="blog" label="Categories" display-as="checkboxes">
+        <perch:before> Posted in: </perch:before>
+            <a href="archive.php?cat=<perch:category id="catSlug" type="slug" />" class="p-category">
+                <perch:category id="catTitle" type="text" />
+            </a>
+        </perch:categories>		
+		
+	</div>
+
+</div>
+
+
+
+<perch:if exists="hero-image">
+
+ <div class="row">	
+
+		<div class="twelve columns">
+	
+			<img class="u-full-width" src="<perch:blog id="hero-image" type="image" width="625" crop="true" label="Hero Image: Width 655px" order="2" />" alt="<perch:blog id="postTitle" />" />
+	
+		</div>
+
+ </div>
+
+</perch:if>
+
+<perch:blog id="excerpt" type="textarea" label="Excerpt" markdown="true" order="3" suppress="true" size="s" />
+	
+<perch:blocks divider-before="Blog Blocks">
+
+<!-- Copy type blocks -->
+
+	<perch:block type="full-width-copy" label="Full width copy">
+
+	<div class="row">	
+
+		<div class="twelve columns">		
+
+			<perch:blog id="postDescHTML" type="textarea" label="Post" editor="markitup" markdown="true" size="xxl autowidth" required="true" />
+
+		</div>
+		
+	</div>
+	
+	</perch:block>
+
+	<perch:block type="quote" label="Quote">
+
+	<div class="row">	
+
+		<div class="twelve columns">	
+	
+			<blockquote>
+	
+				<p><perch:blog id="quote" type="text" label="Quote copy" required="true" /></p>
+		
+				<footer>
+	
+					<cite><perch:blog id="quote-source" type="text" label="Quote Source" title="true" /></cite>
+				
+				</footer>
+				
+			</blockquote>
+
+		</div>
+		
+	</div>
+	
+	</perch:block>	
+
+<!-- Image type blocks -->
+
+	<perch:block type="full-responsive-image" label="Full width responsive image">
+	
+		<img class="u-full-width" src="<perch:blog type="image" id="image" width="625" density="2" label="Full width image: Width 625px " />" alt="<perch:blog type="text" id="alt" label="Description" help="Alt text for image, make it descriptive" title="true" />" />
+	
+	</perch:block>
+	
+	<perch:block type="full-width-polaroid" label="Polaroid style image">
+	
+	<div class="row">	
+
+		<div class="twelve columns">		
+			
+			<div class="polaroid <perch:blog id="polaroid-class" type="select" label="Polaroid Type" options="Type 1|g-1, Type 2|g-2, Type 3|g-3" allowempty="false" required="true" supress="true" help="Select the style of polaroid. Each has diffeernt sticky tape, Type and 3 are rotated clockwise, Type 1 anti-clockwise." />">	
+			
+				<span class="sticky tape"></span>
+			
+				<div class="drop-shadow">
+					
+					<img class="u-full-width" src="<perch:blog type="image" id="image" width="425" density="2" label="Image" />" alt="<perch:blog type="text" id="alt" label="Description" help="This image will display as a polariod style." title="true" />" />
+			
+				</div>
+			
+			</div>
+	
+		</div>
+		
+	</div>
+	
+	</perch:block>
+	
+<!-- Mixed blocks -->
+
+	<perch:block type="left-copy-right-image" label="Copy and Image">
+	
+	<div class="row">	
+
+		<div class="six columns">		
+			
+			<perch:blog id="left-copy" type="textarea" label="Post" editor="markitup" markdown="true" size="xxl autowidth" required="true" />
+			
+		</div>
+
+		<div class="six columns">		
+			
+			<img class="u-full-width" src="<perch:blog type="image" id="right-image" width="315" density="2" label="Full width image: Width 315px " />" alt="<perch:blog type="text" id="alt" label="Description" help="Alt text for image, make it descriptive" title="true" />" />			
+
+		</div>
+		
+	</div>
+	
+	</perch:block>
+
+	<perch:block type="left-image-right-copy" label="Image and Copy">
+	
+	<div class="row">	
+
+		<div class="six columns">		
+
+			<img class="u-full-width" src="<perch:blog type="image" id="left-image" width="315" density="2" label="Full width image: Width 315px " />" alt="<perch:blog type="text" id="alt" label="Description" help="Alt text for image, make it descriptive" title="true" />" />						
+			
+		</div>
+
+		<div class="six columns">		
+			
+			<perch:blog id="right-copy" type="textarea" label="Post" editor="markitup" markdown="true" size="xxl autowidth" required="true" />	
+			
+		</div>
+		
+	</div>
+	
+	</perch:block>
+
+</perch:blocks>
+			
+</article>

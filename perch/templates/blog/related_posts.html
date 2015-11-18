@@ -1,0 +1,13 @@
+<perch:before>
+<div class="row inset-white">
+</perch:before>
+<div class="three columns">
+	
+	<perch:if exists="image"><img class="test" src="<perch:blog id="image" type="image" crop="true" width="150" height="150" />" alt="<perch:blog id="postTitle" />"  width="150" height="150" /></perch:if>
+
+	<perch:blog id="excerpt" type="textarea" textile="true" />
+			
+</div>
+<perch:after>
+</div>
+</perch:after>

@@ -1,0 +1,10 @@
+
+<h3>Categories</h3>
+<ul>
+
+    <li><a href="archive.php?cat=the-cross-girls">The Cross Girls (1)</a></li>
+
+    <li><a href="archive.php?cat=the-cross-shop">The Cross Shop (1)</a></li>
+
+    <li><a href="archive.php?cat=stock">Stock (1)</a></li>
+</ul>

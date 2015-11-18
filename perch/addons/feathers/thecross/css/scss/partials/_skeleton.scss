@@ -646,7 +646,7 @@ footer p.handwritten {
 /* Vertical Inlink Panels used on blog
 ----------------------------------------------------- */
 .vertical-inlink-panel:first-child {
-	margin-top: 30px;
+	margin-top: 80px;
 }
 
 .vertical-inlink-panel {
@@ -758,6 +758,35 @@ span.sticky.tape {
 
 /* Blog styling
 ----------------------------------- */
+article.post-entry {
+	
+	h1 {
+		font-size: 4rem;
+		margin-bottom: 0;
+	}	
+
+	.row:first-child {
+		margin-bottom: 20px;
+	}
+	
+	.row {
+		margin-bottom: 15px;
+	}
+	
+	.row .polaroid {
+		margin-bottom: 25px;
+	}
+	
+	.post-meta {
+		margin-left: 10px;
+	}
+	
+}
+
+h3.handwritten {
+	color: $pink;
+}
+
 li.hentry {
 	list-style: none;
 }
